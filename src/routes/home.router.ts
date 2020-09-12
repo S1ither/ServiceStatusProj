@@ -3,6 +3,6 @@ const route = Router()
 
 import {GET} from "../controllers/home.controller"
 
-route.get("/", GET)
+route.get("/:page", GET)
 
 export default route

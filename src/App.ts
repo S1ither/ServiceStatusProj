@@ -15,6 +15,7 @@ export default class App {
 
 		this.middlewares();
 		this.routes();
+		this.assets();
 	}
 
 	private middlewares() {
@@ -36,6 +37,10 @@ export default class App {
 				this.app.use(file);
 			}
 		}
+	}
+
+	private assets() {
+		this.app.use(express.static(join(__dirname, "public")));
 	}
 
 	public listen() {
